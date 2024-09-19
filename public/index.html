@@ -3,66 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../src/images/svg.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Yayasan Cinta Daarud Dakwah Lombok</title>
   </head>
-  <body class="bg-white font-semibold">
+  <body class="bg-white font-poppins font-semibold">
+    <!-- Header Section -->
     <header class="relative min-h-screen px-4 md:px-20">
       <!-- Background Decoration -->
       <div class="absolute inset-0 overflow-hidden">
-        <!-- Circle Decoration -->
         <div
-          class="absolute w-full h-[800px] bg-primary-default rounded-b-[45%] opacity-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          class="absolute w-full min-h-screen bg-primary-default rounded-b-[45%] opacity-30 left-1/2 transform -translate-x-1/2"
         ></div>
       </div>
 
       <!-- Navigation Bar -->
-      <nav
-        class="relative container flex items-center justify-between px-4 md:px-10 pt-4"
-      >
+      <nav class="relative container flex items-center justify-between px-4 md:px-16 pt-4">
         <div class="logo flex items-center gap-4">
-          <!-- Container for Logo and Line Image -->
-          <img
-            src="../src/images/logo.png"
-            alt="Logo"
-            class="w-[200px] h-12 object-contain"
-          />
+          <img src="../src/images/logo.png" alt="Logo" class="w-[200px] h-12 object-contain" />
         </div>
-        <ul
-          class="flex flex-1 gap-6 md:gap-12 text-sm items-center justify-end text-secondary"
-        >
+        <ul class="flex flex-1 gap-6 md:gap-12 text-sm items-center justify-end text-secondary">
           <li class="cursor-pointer">Beranda</li>
           <li class="cursor-pointer">Tentang Kami</li>
           <li class="cursor-pointer">Program</li>
           <li class="cursor-pointer">Berita</li>
         </ul>
       </nav>
-      <!-- Hero Section Content -->
-      <div
-        class="relative flex flex-col items-center justify-around h-screen px-4 pt-20 gap-20"
-      >
-        <div class="flex items-center justify-center w-full gap-4">
+
+      <!-- Hero Section -->
+      <div class="relative flex flex-col items-center justify-around h-screen px-16 pt-20 gap-36">
+        <div class="flex items-center justify-start w-full gap-20">
           <!-- Text Content -->
-          <div
-            id="text-content"
-            class="mb-6 md:mb-0 md:mr-8 md:text-left text-secondary"
-          >
+          <div id="text-content" class="text-secondary">
             <img
               src="../src/images/Group 1.png"
               alt="Slogan Image"
               class="w-[600px] h-auto object-contain"
             />
           </div>
+
           <!-- Hero Image -->
           <div
             id="hero-image"
-            class="w-[250px] h-[350px] border-2 border-black rounded-3xl overflow-hidden"
+            class="w-[250px] h-[300px] border-2 border-black rounded-3xl overflow-hidden"
           >
             <img
               src="../src/images/444b8018ebc3991b72be599b51bd28e0.jpg"
@@ -71,37 +60,108 @@
             />
           </div>
         </div>
-        <div id="statistics" class="flex w-3/4 h-32 bg-white shadow-2xl rounded-3xl mt-20 text-secondary">
+
+        <!-- Statistics Section -->
+        <div id="statistics" class="flex w-3/4 h-32 bg-white shadow-2xl rounded-3xl text-secondary">
           <div class="flex items-center justify-around w-full h-full p-4">
-            <div class="data-pengajar text-center ">
+            <div class="data-pengajar text-center">
               <h2 class="text-5xl">25</h2>
-              <p class="  text-primary">Pengajar</p>
+              <p class="text-primary">Pengajar</p>
             </div>
-            <div class="data-santriwan text-center ">
+            <div class="data-santriwan text-center">
               <h2 class="text-5xl">97</h2>
-              <p class="  text-primary">santriwan</p>
+              <p class="text-primary">Santriwan</p>
             </div>
-            <div class="data-santriwati text-center ">
+            <div class="data-santriwati text-center">
               <h2 class="text-5xl">87</h2>
-              <p class="  text-primary">santriwati</p>
+              <p class="text-primary">Santriwati</p>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Main -->
-    <main>
-      <section id="about-us">
-        <div class="container flex gap-12">
-          <article></article>
-          <article></article>
+    <!-- Main Section -->
+    <main class="py-16">
+      <section id="about-us" class="container mx-auto px-40">
+        <div id="container-inforation-daarud-dakwah" class="flex gap-12 text-secondary justify-around ">
+          <!-- Daarud Dakwah: Information -->
+          <article class="w-1/2 ">
+            <h2 class="text-3xl mb-2">
+              Yayasan <br />
+              Cinta Daarud Dakwah Lombok
+            </h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, <br /><br />
+              but also the leap into electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+              passages, and more recently with desktop publishing software like Aldus PageMaker
+              including versions of Lorem Ipsum.
+            </p>
+          </article>
+
+          <!-- Daarud Dakwah: Vision and Mission -->
+          <article class="w-2/6">
+            <br>
+            <h2 class="text-3xl font-bold mb-2">Visi dan Misi</h2>
+            <h3 class="text-xl font-semibold mb-2">Visi</h3>
+            <p>
+              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan inovatif untuk
+              memenuhi kebutuhan pelanggan di seluruh dunia.
+            </p>
+
+            <h3 class="text-xl font-semibold mt-2 mb-2">Misi</h3>
+            <p>
+              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan inovatif untuk
+              memenuhi kebutuhan pelanggan di seluruh dunia.
+            </p>
+          </article>
+        </div>
+        <br>
+        <div id="container-inforation-pondok-nurul-ilmi" class="flex gap-12 text-secondary justify-around">
+          <!-- Pondok Pesantren Nurul Ilmi : Information -->
+          <article class="w-1/2">
+            <h2 class="text-3xl mb-4">
+              Yayasan <br />
+              Cinta Daarud Dakwah Lombok
+            </h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, <br /><br />
+              but also the leap into electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+              passages, and more recently with desktop publishing software like Aldus PageMaker
+              including versions of Lorem Ipsum.
+            </p>
+          </article>
+
+          <!-- Pondok Pesantren Nurul Ilmi : Vision and Mission -->
+          <article class="w-2/6">
+            <br>
+            <h2 class="text-3xl mb-2">Visi dan Misi</h2>
+            <h3 class="text-xl mb-2">Visi</h3>
+            <p>
+              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan inovatif untuk
+              memenuhi kebutuhan pelanggan di seluruh dunia.
+            </p>
+
+            <h3 class="text-xl font-semibold mt-4 mb-2">Misi</h3>
+            <p>
+              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan inovatif untuk
+              memenuhi kebutuhan pelanggan di seluruh dunia.
+            </p>
+          </article>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="container mx-auto mt-8 p-4 text-center">
+    <!-- Footer Section -->
+    <footer class="container mx-auto mt-16 p-4 text-center text-secondary">
       &copy; 2024 Perusahaan Anda. All rights reserved.
     </footer>
   </body>
