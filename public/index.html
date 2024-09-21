@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../src/images/svg.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../public/assets/images/svg.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,22 +17,30 @@
     <link rel="stylesheet" href="style.css" />
     <title>Yayasan Cinta Daarud Dakwah Lombok</title>
   </head>
-  <body class="bg-white font-poppins font-semibold">
+  <body class="bg-white antialiased tracking-wide font-custom">
     <!-- Header Section -->
     <header class="relative min-h-screen px-4 md:px-20">
       <!-- Background Decoration -->
       <div class="absolute inset-0 overflow-hidden">
         <div
-          class="absolute w-full min-h-screen bg-primary-default rounded-b-[45%] opacity-30 left-1/2 transform -translate-x-1/2"
+          class="absolute w-full min-h-screen bg-primary-default rounded-b-[35%] opacity-30 left-1/2 transform -translate-x-1/2"
         ></div>
       </div>
 
       <!-- Navigation Bar -->
-      <nav class="relative container flex items-center justify-between px-4 md:px-16 pt-4">
+      <nav
+        class="relative container flex items-center justify-between px-4 md:px-16 pt-4"
+      >
         <div class="logo flex items-center gap-4">
-          <img src="../src/images/logo.png" alt="Logo" class="w-[200px] h-12 object-contain" />
+          <img
+            src="../public/assets/images/logo.png"
+            alt="Logo"
+            class="w-[200px] h-12 object-contain"
+          />
         </div>
-        <ul class="flex flex-1 gap-6 md:gap-12 text-sm items-center justify-end text-secondary">
+        <ul
+          class="flex flex-1 gap-6 md:gap-12 text-sm items-center justify-end text-secondary"
+        >
           <li class="cursor-pointer">Beranda</li>
           <li class="cursor-pointer">Tentang Kami</li>
           <li class="cursor-pointer">Program</li>
@@ -37,24 +49,23 @@
       </nav>
 
       <!-- Hero Section -->
-      <div class="relative flex flex-col items-center justify-around h-screen px-16 pt-20 gap-36">
+      <div
+        class="relative flex flex-col items-center justify-around h-screen px-16 pt-20 gap-36"
+      >
         <div class="flex items-center justify-start w-full gap-20">
           <!-- Text Content -->
           <div id="text-content" class="text-secondary">
             <img
-              src="../src/images/Group 1.png"
+              src="../public/assets/images/Group 1.png"
               alt="Slogan Image"
               class="w-[600px] h-auto object-contain"
             />
           </div>
 
           <!-- Hero Image -->
-          <div
-            id="hero-image"
-            class="w-[250px] h-[300px] border-2 border-black rounded-3xl overflow-hidden"
-          >
+          <div id="hero-image" class="card w-[250px] h-[300px]">
             <img
-              src="../src/images/444b8018ebc3991b72be599b51bd28e0.jpg"
+              src="../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg"
               alt="Hero Image"
               class="w-full h-full object-cover"
             />
@@ -62,18 +73,21 @@
         </div>
 
         <!-- Statistics Section -->
-        <div id="statistics" class="flex w-3/4 h-32 bg-white shadow-2xl rounded-3xl text-secondary">
+        <div
+          id="statistics"
+          class="flex w-3/4 h-32 bg-white shadow-2xl rounded-3xl text-secondary"
+        >
           <div class="flex items-center justify-around w-full h-full p-4">
             <div class="data-pengajar text-center">
-              <h2 class="text-5xl">25</h2>
+              <h2 class="text-6xl">25</h2>
               <p class="text-primary">Pengajar</p>
             </div>
             <div class="data-santriwan text-center">
-              <h2 class="text-5xl">97</h2>
+              <h2 class="text-6xl">97</h2>
               <p class="text-primary">Santriwan</p>
             </div>
             <div class="data-santriwati text-center">
-              <h2 class="text-5xl">87</h2>
+              <h2 class="text-6xl">87</h2>
               <p class="text-primary">Santriwati</p>
             </div>
           </div>
@@ -83,86 +97,238 @@
 
     <!-- Main Section -->
     <main class="py-16">
-      <section id="about-us" class="container mx-auto px-40">
-        <div id="container-inforation-daarud-dakwah" class="flex gap-12 text-secondary justify-around ">
+      <!-- About Us Section -->
+      <section id="about-us" class="container md:px-28 text-secondary">
+        <div
+          id="container-information-daarud-dakwah"
+          class="flex gap-12 justify-around"
+        >
           <!-- Daarud Dakwah: Information -->
-          <article class="w-1/2 ">
-            <h2 class="text-3xl mb-2">
-              Yayasan <br />
-              Cinta Daarud Dakwah Lombok
-            </h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, <br /><br />
-              but also the leap into electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
-            </p>
-          </article>
-
-          <!-- Daarud Dakwah: Vision and Mission -->
-          <article class="w-2/6">
-            <br>
-            <h2 class="text-3xl font-bold mb-2">Visi dan Misi</h2>
-            <h3 class="text-xl font-semibold mb-2">Visi</h3>
-            <p>
-              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan inovatif untuk
-              memenuhi kebutuhan pelanggan di seluruh dunia.
-            </p>
-
-            <h3 class="text-xl font-semibold mt-2 mb-2">Misi</h3>
-            <p>
-              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan inovatif untuk
-              memenuhi kebutuhan pelanggan di seluruh dunia.
-            </p>
-          </article>
-        </div>
-        <br>
-        <div id="container-inforation-pondok-nurul-ilmi" class="flex gap-12 text-secondary justify-around">
-          <!-- Pondok Pesantren Nurul Ilmi : Information -->
           <article class="w-1/2">
             <h2 class="text-3xl mb-4">
               Yayasan <br />
               Cinta Daarud Dakwah Lombok
             </h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, <br /><br />
-              but also the leap into electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
+            <p class="leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
             </p>
           </article>
 
-          <!-- Pondok Pesantren Nurul Ilmi : Vision and Mission -->
+          <!-- Daarud Dakwah: Vision and Mission -->
           <article class="w-2/6">
-            <br>
-            <h2 class="text-3xl mb-2">Visi dan Misi</h2>
-            <h3 class="text-xl mb-2">Visi</h3>
-            <p>
-              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan inovatif untuk
-              memenuhi kebutuhan pelanggan di seluruh dunia.
+            <h2 class="text-3xl font-bold mb-4">Visi & Misi</h2>
+            <h3 class="text-xl font-semibold mb-2">Visi</h3>
+            <p class="mb-4">
+              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan
+              inovatif untuk memenuhi kebutuhan pelanggan di seluruh dunia.
             </p>
-
-            <h3 class="text-xl font-semibold mt-4 mb-2">Misi</h3>
+            <h3 class="text-xl font-semibold mb-2">Misi</h3>
             <p>
-              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan inovatif untuk
-              memenuhi kebutuhan pelanggan di seluruh dunia.
+              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan
+              inovatif untuk memenuhi kebutuhan pelanggan di seluruh dunia.
+            </p>
+          </article>
+        </div>
+
+        <div
+          id="container-information-pondok-nurul-ilmi"
+          class="flex gap-12 justify-around mt-8"
+        >
+          <!-- Pondok Pesantren Nurul Ilmi: Information -->
+          <article class="w-1/2">
+            <h2 class="text-3xl mb-4">
+              Yayasan <br />
+              Cinta Daarud Dakwah Lombok
+            </h2>
+            <p class="leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </article>
+
+          <!-- Pondok Pesantren Nurul Ilmi: Vision and Mission -->
+          <article class="w-2/6">
+            <h2 class="text-3xl font-bold mb-4">Visi & Misi</h2>
+            <h3 class="text-xl font-semibold mb-2">Visi</h3>
+            <p class="mb-4">
+              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan
+              inovatif untuk memenuhi kebutuhan pelanggan di seluruh dunia.
+            </p>
+            <h3 class="text-xl font-semibold mb-2">Misi</h3>
+            <p>
+              Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan
+              inovatif untuk memenuhi kebutuhan pelanggan di seluruh dunia.
             </p>
           </article>
         </div>
       </section>
-    </main>
 
-    <!-- Footer Section -->
-    <footer class="container mx-auto mt-16 p-4 text-center text-secondary">
-      &copy; 2024 Perusahaan Anda. All rights reserved.
-    </footer>
+      <!-- Program Section -->
+      <div class="w-full h-screen relative mt-16 md:px-40">
+        <div class="absolute inset-0 overflow-hidden">
+          <div
+            class="absolute w-full min-h-screen bg-primary-default rounded-t-[35%] opacity-30 left-1/2 transform -translate-x-1/2"
+          ></div>
+        </div>
+        <!-- Text Content - Program -->
+        <section id="program" class="relative text-secondary">
+          <article class="flex flex-col justify-center items-center">
+            <h2 class="text-3xl font-bold my-10">Program</h2>
+            <div
+              class="container-card container flex flex-wrap justify-between"
+            >
+              <div class="card relative w-[300px] h-[200px]">
+                <img
+                  src="#"
+                  alt="image card"
+                  class="w-full h-full object-cover block"
+                />
+                <div
+                  class="content absolute w-full h-full top-0 left-0 hover:bg-hover-color hover:opacity-100 flex justify-center items-center flex-col opacity-0 transition duration-300"
+                >
+                  <button
+                    class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
+                  >
+                    Lihat Selengkapnya
+                  </button>
+                </div>
+                <div class="title-content">Tahfidz</div>
+              </div>
+              <div class="card relative w-[300px] h-[200px]">
+                <img
+                  src="#"
+                  alt="image card"
+                  class="w-full h-full object-cover block"
+                />
+                <div
+                  class="content absolute w-full h-full top-0 left-0 hover:bg-hover-color hover:opacity-100 flex justify-center items-center flex-col opacity-0 transition duration-300"
+                >
+                  <button
+                    class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
+                  >
+                    Lihat Selengkapnya
+                  </button>
+                </div>
+                <div class="title-content">Bahasa Arab</div>
+              </div>
+              <div class="card relative w-[300px] h-[200px]">
+                <img
+                  src="#"
+                  alt="image card"
+                  class="w-full h-full object-cover block"
+                />
+                <div
+                  class="content absolute w-full h-full top-0 left-0 hover:bg-hover-color hover:opacity-100 flex justify-center items-center flex-col opacity-0 transition duration-300"
+                >
+                  <button
+                    class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
+                  >
+                    Lihat Selengkapnya
+                  </button>
+                </div>
+                <div class="title-content text-center">
+                  Pengajian Umum <br />
+                  Ibu-Ibu
+                </div>
+              </div>
+            </div>
+            <div
+              class="container-information w-full h-36 mt-20 rounded-3xl shadow-2xl bg-third px-5 flex justify-center items-center text-white"
+            >
+              <div
+                class="informasion-foundation-management container flex items-start justify-between"
+              >
+                <div class="title w-auto">
+                  <h3 class="text-3xl tracking-wider font-semibold">
+                    Struktur <br />
+                    Pengelola <br />
+                    Yayasan
+                  </h3>
+                </div>
+                <div class="foundation font-poppins">
+                  <h5 class="font-poppins font-semibold text-sm">
+                    Ustaz Cinta Restu Sugiharto
+                  </h5>
+                  <p class="text-xs">
+                    Pembina Yayasan Cinta Daarud <br />
+                    Dakwah Lombok
+                  </p>
+                </div>
+                <div
+                  class="foundation-main font-poppins flex flex-col justify-between gap-2"
+                >
+                  <div class="fondation-president">
+                    <h5 class="font-poppins font-semibold text-sm">
+                      Ustaz Hardi
+                    </h5>
+                    <p class="text-xs">Ketua Yayasan</p>
+                  </div>
+                  <div class="fondation-Secretary">
+                    <h5 class="font-poppins font-semibold text-sm">Hambali</h5>
+                    <p class="text-xs">Sekertaris</p>
+                  </div>
+                  <div class="fondation-Treasurer">
+                    <h5 class="font-poppins font-semibold text-sm">
+                      Ayu Muliya Sari
+                    </h5>
+                    <p class="text-xs">Bendahara</p>
+                  </div>
+                </div>
+                <div
+                  class="foundation-main font-poppins flex flex-col justify-between gap-2"
+                >
+                  <div class="fondation-president">
+                    <h5 class="font-poppins font-semibold text-sm">
+                      Danu Rio Waldi
+                    </h5>
+                    <p class="text-xs">Bidang Media</p>
+                  </div>
+                  <div class="fondation-Secretary">
+                    <h5 class="font-poppins font-semibold text-sm">
+                      Aavi Salsa Nabila
+                    </h5>
+                    <p class="text-xs">Bidang ZIS I (Zakat, Infaq, Shodaqoh)</p>
+                  </div>
+                  <div class="fondation-Treasurer">
+                    <h5 class="font-poppins font-semibold text-sm">
+                      Rizka Hasanah
+                    </h5>
+                    <p class="text-xs">
+                      Bidang ZIS II (Zakat, Infaq, Shodaqoh)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <!-- Informations now Section -->
+      <div class="w-full h-[50vh] relative md:px-40">
+        <div class="absolute inset-0 overflow-hidden">
+          <div
+            class="absolute w-full min-h-screen bg-primary-default opacity-30 left-1/2 transform -translate-x-1/2"
+          ></div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
