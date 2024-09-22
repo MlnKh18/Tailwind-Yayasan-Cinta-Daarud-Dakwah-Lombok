@@ -12,8 +12,30 @@
   font-weight: normal;
   font-style: normal;
 }
-
+nav ul li{
+  @apply cursor-pointer transition px-3 py-1 hover:bg-secondary hover:text-white rounded-lg duration-300 ease-in-out
+}
 /* Global Styles */
+#popup-nav {
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+#close-popup {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 
 h2 {
   @apply font-bold tracking-wider;
@@ -26,7 +48,6 @@ p {
 .card {
   @apply border-2 border-black rounded-3xl overflow-hidden;
 }
-
 .show-more-button:hover {
   border: 2px solid rgb(185, 185, 185);
   transition: all ease-in-out 0.6s;
@@ -40,10 +61,10 @@ p {
   width: 250px !important; /* Custom width */
   height: 350px !important; /* Custom height */
 }
-.swiper-pagination{
+.swiper-pagination {
   padding-left: 12rem;
   position: static;
-  text-align: start;
+  text-align: center;
 }
 .swiper-pagination-bullet {
   width: 10px !important; /* Default width with !important */
@@ -52,21 +73,17 @@ p {
   background-color: #878787;
   transition: all ease-in-out 0.6s;
 }
-.swiper-pagination-bullet-active{
-  background-color: #9A5757 !important;
+.swiper-pagination-bullet-active {
+  background-color: #9a5757 !important;
   width: 30px !important;
   border-radius: 40% !important;
-
 }
-.swiper-pagination-horizontal{
-  width: 50% !important;
+.swiper-pagination-horizontal {
+  margin-top: 10px;
+  padding-left: 0 !important ;
 }
 .shape-circle {
   position: relative;
   border-radius: 50%;
   box-shadow: 0px 5px 10px #888888;
 }
-
-
-
-

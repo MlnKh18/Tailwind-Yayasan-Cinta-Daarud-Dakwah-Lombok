@@ -25,7 +25,7 @@
   </head>
   <body class="bg-white antialiased tracking-wide font-custom">
     <!-- Header Section -->
-    <header class="relative min-h-screen px-4 md:px-20">
+    <header class="relative min-h-screen px-14 md:px-10">
       <!-- Background Decoration -->
       <div class="absolute inset-0 overflow-hidden">
         <div
@@ -33,9 +33,8 @@
         ></div>
       </div>
 
-      <!-- Navigation Bar -->
       <nav
-        class="relative container flex items-center justify-between px-4 md:px-16 pt-4"
+        class="relative lg:container flex items-center justify-between px-2 sm:px-16 pt-4"
       >
         <div class="logo flex items-center gap-4">
           <img
@@ -45,33 +44,90 @@
           />
         </div>
         <ul
-          class="flex flex-1 gap-6 md:gap-12 text-sm items-center justify-end text-secondary"
+          class="hidden lg:flex flex-1 gap-6 md:gap-12 text-sm items-center justify-end text-secondary"
         >
-          <li class="cursor-pointer">Beranda</li>
-          <li class="cursor-pointer">Tentang Kami</li>
-          <li class="cursor-pointer">Program</li>
-          <li class="cursor-pointer">Berita</li>
+          <li class="cursor-pointer">
+            <a href="#home">Beranda</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="#about-us" class="nav-properti">Tentang Kami</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="#program" class="nav-properti">Program</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="#information-now" class="nav-properti">Berita</a>
+          </li>
         </ul>
+
+        <div
+          class="flex lg:hidden flex-1 justify-end cursor-pointer"
+          id="menu-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
       </nav>
+
+      <!-- Pop-up Navigation (Initially Hidden) -->
+      <div
+        id="popup-nav"
+        class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-50 hidden"
+      >
+        <div class="absolute top-4 right-4">
+          <!-- Close Button (X) -->
+          <button id="close-popup" class="text-white text-3xl cursor-pointer">
+            &times;
+          </button>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-center h-full gap-6 text-white text-2xl"
+        >
+          <a href="#home" class="nav-properti cursor-pointer">Beranda</a>
+          <a href="#about-us" class="nav-properti cursor-pointer"
+            >Tentang Kami</a
+          >
+          <a href="#program" class="nav-properti cursor-pointer">Program</a>
+          <a href="#information-now" class="nav-properti cursor-pointer"
+            >Berita</a
+          >
+        </div>
+      </div>
 
       <!-- Hero Section -->
       <div
-        class="relative flex flex-col items-center justify-around h-screen px-16 pt-20 gap-36"
+        class="relative flex flex-col items-center justify-around h-screen md:px-16 pt-20 lg:pt-12 gap-16 md:gap-36"
       >
-        <div class="flex items-center justify-start w-full gap-20">
+        <div
+          class="flex items-center flex-col md:flex-row justify-start w-full gap-20"
+        >
           <!-- Text Content -->
           <div id="text-content" class="text-secondary">
             <img
               src="../public/assets/images/Group 1.png"
               alt="Slogan Image"
-              class="w-[600px] h-auto object-contain"
+              class="w-full md:w-[600px] h-auto object-contain"
             />
           </div>
 
           <!-- Hero Image -->
           <div id="hero-image" class="card w-[250px] h-[300px]">
             <img
-              src="../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg"
+              src="../public/assets/images/"
               alt="Hero Image"
               class="w-full h-full object-cover"
             />
@@ -81,20 +137,20 @@
         <!-- Statistics Section -->
         <div
           id="statistics"
-          class="flex w-3/4 h-32 bg-white shadow-2xl rounded-3xl text-secondary"
+          class="flex w-full md:w-3/4 h-28 md:h-32 bg-white shadow-2xl rounded-3xl text-secondary"
         >
-          <div class="flex items-center justify-around w-full h-full p-4">
+          <div class="flex items-center justify-around w-full h-full p-4 gap-3">
             <div class="data-pengajar text-center">
-              <h2 class="text-6xl">25</h2>
-              <p class="text-primary">Pengajar</p>
+              <h2 class="text-5xl sm:text-6xl font-bold text-center">25</h2>
+              <p class="text-primary text-sm sm:text-xl">Pengajar</p>
             </div>
             <div class="data-santriwan text-center">
-              <h2 class="text-6xl">97</h2>
-              <p class="text-primary">Santriwan</p>
+              <h2 class="text-5xl sm:text-6xl font-bold text-center">97</h2>
+              <p class="text-primary text-sm sm:text-xl">Santriwan</p>
             </div>
             <div class="data-santriwati text-center">
-              <h2 class="text-6xl">87</h2>
-              <p class="text-primary">Santriwati</p>
+              <h2 class="text-5xl sm:text-6xl font-bold text-center">87</h2>
+              <p class="text-primary text-sm sm:text-xl">Santriwati</p>
             </div>
           </div>
         </div>
@@ -104,13 +160,13 @@
     <!-- Main Section -->
     <main class="py-16">
       <!-- About Us Section -->
-      <section id="about-us" class="container md:px-28 text-secondary">
+      <section id="about-us" class="w-full md:px-28 text-secondary px-4">
         <div
           id="container-information-daarud-dakwah"
-          class="flex gap-12 justify-around"
+          class="flex gap-12 flex-col md:flex-row justify-around mb-5"
         >
           <!-- Daarud Dakwah: Information -->
-          <article class="w-1/2">
+          <article class="w-full md:w-2/3">
             <h2 class="text-3xl mb-4">
               Yayasan <br />
               Cinta Daarud Dakwah Lombok
@@ -130,9 +186,9 @@
           </article>
 
           <!-- Daarud Dakwah: Vision and Mission -->
-          <article class="w-2/6">
+          <article class="w-full md:w-2/4 md:mt-0">
             <h2 class="text-3xl font-bold mb-4">Visi & Misi</h2>
-            <h3 class="text-xl font-semibold mb-2">Visi</h3>
+            <h3 class="text-xl font-semibold mb-4">Visi</h3>
             <p class="mb-4">
               Menjadi perusahaan terkemuka yang menyediakan solusi terbaik dan
               inovatif untuk memenuhi kebutuhan pelanggan di seluruh dunia.
@@ -147,15 +203,15 @@
 
         <div
           id="container-information-pondok-nurul-ilmi"
-          class="flex gap-12 justify-around mt-8"
+          class="flex gap-12 flex-col md:flex-row justify-around"
         >
           <!-- Pondok Pesantren Nurul Ilmi: Information -->
-          <article class="w-1/2">
+          <article class="w-full md:w-2/3">
             <h2 class="text-3xl mb-4">
               Yayasan <br />
               Cinta Daarud Dakwah Lombok
             </h2>
-            <p class="leading-relaxed">
+            <p class="leading-relaxed pr-3">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -170,7 +226,7 @@
           </article>
 
           <!-- Pondok Pesantren Nurul Ilmi: Vision and Mission -->
-          <article class="w-2/6">
+          <article class="w-full md:w-2/4">
             <h2 class="text-3xl font-bold mb-4">Visi & Misi</h2>
             <h3 class="text-xl font-semibold mb-2">Visi</h3>
             <p class="mb-4">
@@ -187,7 +243,7 @@
       </section>
 
       <!-- Program Section -->
-      <div class="w-full h-[70%] relative mt-16 md:px-40">
+      <div class="w-full h-[70%] relative mt-16">
         <div class="absolute inset-0 overflow-hidden">
           <div
             class="absolute w-full min-h-full bg-primary-default rounded-t-[35%] opacity-30 left-1/2 transform -translate-x-1/2"
@@ -195,9 +251,13 @@
         </div>
         <!-- Text Content - Program -->
         <section id="program" class="relative text-secondary">
-          <article class="flex flex-col justify-center items-center">
+          <article
+            class="flex flex-col justify-center items-center px-14 md:px-28"
+          >
             <h2 class="text-3xl font-bold my-10">Program</h2>
-            <div class="container-card container flex flex-wrap justify-evenly">
+            <div
+              class="container-card container flex flex-wrap justify-evenly gap-10"
+            >
               <div class="card relative w-[300px] h-[200px]">
                 <img
                   src="#"
@@ -254,10 +314,10 @@
               </div>
             </div>
             <div
-              class="container-information w-full h-36 mt-20 rounded-3xl shadow-2xl bg-third px-5 flex justify-center items-center text-white"
+              class="container-information w-full h-auto mt-20 rounded-3xl shadow-2xl bg-third px-5 lg:px-28 py-3 flex flex-wrap justify-center items-center text-white"
             >
               <div
-                class="informasion-foundation-management container flex items-start justify-between"
+                class="informasion-foundation-management container flex items-start justify-start lg:justify-between flex-wrap gap-5"
               >
                 <div class="title w-auto">
                   <h3 class="text-3xl tracking-wider font-semibold">
@@ -326,7 +386,7 @@
       </div>
 
       <!-- Informations now Section -->
-      <div class="w-full h-[75vh] relative pt-10 flex flex-col justify-between">
+      <div class="w-full h-auto relative pt-10 flex flex-col justify-between">
         <div class="absolute inset-0 overflow-hidden">
           <div
             class="absolute w-full min-h-screen bg-primary-default opacity-30 left-1/2 transform -translate-x-1/2"
@@ -334,16 +394,16 @@
         </div>
         <section id="information-now" class="w-full">
           <div
-            class="relative heading-title flex flex-col justify-center items-center mb-4 text-secondary"
+            class="relative heading-title flex flex-col justify-center items-center mb-4 text-secondary text-center"
           >
-            <h2 class="text-3xl ">Informasi Terkini</h2>
+            <h2 class="text-3xl">Informasi Terkini</h2>
             <p>Berita dan Informasi Terkini Yayasan Daarud Dakwah Lombok</p>
           </div>
           <div class="relative content-carousel">
             <!-- Swiper -->
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper mb-14 w-full">
               <div class="swiper-wrapper">
-                <div class="swiper-slide custom-slide">
+                <div class="swiper-slide custom-slide w-full sm:w-1/2 md:w-1/3">
                   <div
                     class="flex flex-col h-full justify-start items-center relative"
                   >
@@ -365,34 +425,54 @@
                     <div
                       class="title-item-slide w-full flex flex-col justify-center p-1 font-poppins"
                     >
-                      <h5 class="text-xl font-bold">Judul</h5>
+                      <h5 class="text-lg md:text-xl font-bold">Judul</h5>
                       <p class="text-sm">Selasa, 10 September 2024</p>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide custom-slide">
+
+                <!-- Repeat for other slides -->
+                <div class="swiper-slide custom-slide w-full sm:w-1/2 md:w-1/3">
                   <div
                     class="flex flex-col h-full justify-start items-center relative"
                   >
-                    <!-- Category Label -->
                     <span
                       class="absolute top-2 left-2 bg-gray-300 px-2 rounded-xl z-10 text-xs text-black font-normal font-poppins"
                     >
                       Category
                     </span>
-
-                    <!-- Image -->
                     <img
-                      src="../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg"
+                      src="../public/assets"
                       alt=""
                       class="w-full h-3/4 rounded-t-xl border-t-2 border-b-2 border-black object-cover"
                     />
-
-                    <!-- Title and Date -->
                     <div
                       class="title-item-slide w-full flex flex-col justify-center p-1 font-poppins"
                     >
-                      <h5 class="text-xl font-bold">Judul</h5>
+                      <h5 class="text-lg md:text-xl font-bold">Judul</h5>
+                      <p class="text-sm">Selasa, 10 September 2024</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide custom-slide w-full sm:w-1/2 md:w-1/3">
+                  <div
+                    class="flex flex-col h-full justify-start items-center relative"
+                  >
+                    <span
+                      class="absolute top-2 left-2 bg-gray-300 px-2 rounded-xl z-10 text-xs text-black font-normal font-poppins"
+                    >
+                      Category
+                    </span>
+                    <img
+                      src="../public/assets"
+                      alt=""
+                      class="w-full h-3/4 rounded-t-xl border-t-2 border-b-2 border-black object-cover"
+                    />
+                    <div
+                      class="title-item-slide w-full flex flex-col justify-center p-1 font-poppins"
+                    >
+                      <h5 class="text-lg md:text-xl font-bold">Judul</h5>
                       <p class="text-sm">Selasa, 10 September 2024</p>
                     </div>
                   </div>
@@ -404,46 +484,68 @@
             </div>
           </div>
         </section>
-        <div class="container-shape relative w-full">
+        <div class="container-shape relative w-full flex justify-center">
           <div
             class="absolute decorations-shape bg-inherit w-full h-10 z-10"
           ></div>
           <div
-            class="absolute decorations-shape bg-white w-full h-10 z-10 top-1/2"
+            class="absolute decorations-shape bg-white w-full h-10 z-10 top-1/2 rounded-3xl"
           ></div>
 
           <!-- Circle with the triangle -->
-          <div class="shape-circle rounded-full w-14 h-14 bg-third absolute z-40 left-1/2 flex justify-center items-center">
-            <img src="../public/assets/images/Polygon 3 (1).png" alt="" class="w-7 object-cover">
+          <div
+            class="shape-circle rounded-full w-14 h-14 bg-third absolute z-40 flex justify-center items-center"
+          >
+            <img
+              src="../public/assets/images/Polygon 3 (1).png"
+              alt=""
+              class="w-7 object-cover"
+            />
           </div>
         </div>
       </div>
     </main>
+    <div
+      class="commons-footer w-full overflow-visible flex flex-col justify-start items-center mb-10"
+    >
+      <div
+        class="container-logo-company w-full flex justify-center items-center gap-5 mb-5"
+      >
+        <img
+          src="../public/assets/images/Logo Yayasan & Ma'had 1.png"
+          class="w-20 h-20 object-cover"
+          alt=""
+        />
+        <img
+          src="../public/assets/images/Mask group.png"
+          class="w-20 h-20 object-cover"
+          alt=""
+        />
+      </div>
+      <div class="deskripsi w-3/4 text-center text-secondary">
+        <p>
+          Jalinan Kerjasama (Sinergi) Yayasa Cinta Daarud Dakwah Lombok dengan
+          Yayasan Pondok Pesantren Nurul Ilmi ini dengan tujuan untuk membantu
+          memajukan yayasan dari segi memberikan pelayanan belajar gratis untuk
+          santiwan/santriwati yatim, yatim piatu, dan Dhuafa supaya tetap dapat
+          melanjutkan belajar untuk memperdalam ilmu agama khususnya tahfidz &
+          bahasa arab. Dari Sinergi inilah dapat terbentuk
+          <b> Ma’had Love Tahfidz Nurul Ilmi</b>, dimana disini tempat
+          bermukimnya santriwan untuk bisa lebih giat & intens belajar
+          <b>Tahfidz & Bahasa Arab</b>. sehingga dengan cepat dapat khatam 30
+          Juz. Dari Kerjasama atau Sinergi Tersebut terbentuklah
+          <b> Yayasan Love Tahfidz Nurul Ilmi</b> yang Semula namanya
+          <b>Yayasan Pondok Pesantren Nurul Ilmi.</b>
+        </p>
+      </div>
+    </div>
+    <footer class="text-center px-1">
+      Copyrights ©2024 Yayasan Cinta Daarud Dakwah Lombok & Ma’had Love Tahfidz
+      Nurul Ilmi. All Rights Reserved
+    </footer>
     <!-- Swipper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const swiperPaginationBullets = document.querySelectorAll(
-          ".swiper-pagination-bullet"
-        );
-
-        if (swiperPaginationBullets.length > 0) {
-          swiperPaginationBullets.forEach((bullet) => {
-            bullet.classList.add("wide"); // Add class "wide" to increase the size
-          });
-        }
-      });
-
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        centeredSlides: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
+    <script src="../src/js/script.js"></script>
   </body>
 </html>
