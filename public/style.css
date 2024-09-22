@@ -608,8 +608,28 @@ video {
   left: 50%;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .my-10 {
@@ -645,16 +665,32 @@ video {
   display: flex;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-12 {
   height: 3rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-3\/4 {
+  height: 75%;
 }
 
 .h-32 {
   height: 8rem;
 }
 
-.h-40 {
-  height: 10rem;
+.h-36 {
+  height: 9rem;
+}
+
+.h-5 {
+  height: 1.25rem;
 }
 
 .h-\[200px\] {
@@ -663,6 +699,14 @@ video {
 
 .h-\[300px\] {
   height: 300px;
+}
+
+.h-\[70\%\] {
+  height: 70%;
+}
+
+.h-\[75vh\] {
+  height: 75vh;
 }
 
 .h-auto {
@@ -677,20 +721,16 @@ video {
   height: 100vh;
 }
 
-.h-3 {
-  height: 0.75rem;
+.h-1 {
+  height: 0.25rem;
 }
 
-.h-36 {
-  height: 9rem;
+.h-14 {
+  height: 3.5rem;
 }
 
-.h-\[\] {
-  height: ;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
+.min-h-full {
+  min-height: 100%;
 }
 
 .min-h-screen {
@@ -701,16 +741,20 @@ video {
   width: 50%;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
 .w-2\/6 {
   width: 33.333333%;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
 .w-3\/4 {
   width: 75%;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-\[200px\] {
@@ -729,20 +773,24 @@ video {
   width: 600px;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-auto {
   width: auto;
 }
 
-.w-3 {
-  width: 0.75rem;
+.w-full {
+  width: 100%;
 }
 
-.w-2 {
-  width: 0.5rem;
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .flex-1 {
@@ -798,6 +846,10 @@ video {
   justify-content: space-around;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .gap-12 {
   gap: 3rem;
 }
@@ -830,8 +882,16 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-b-\[35\%\] {
@@ -842,6 +902,33 @@ video {
 .rounded-t-\[35\%\] {
   border-top-left-radius: 35%;
   border-top-right-radius: 35%;
+}
+
+.rounded-t-xl {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-t-2 {
+  border-top-width: 2px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-inherit {
+  background-color: inherit;
 }
 
 .bg-primary-default {
@@ -874,16 +961,12 @@ video {
      object-fit: cover;
 }
 
-.p-3 {
-  padding: 0.75rem;
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .px-16 {
@@ -901,6 +984,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -911,9 +999,8 @@ video {
   padding-bottom: 4rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .pt-20 {
@@ -922,10 +1009,6 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
 }
 
 .text-center {
@@ -969,6 +1052,10 @@ video {
   font-weight: 700;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -983,6 +1070,11 @@ video {
 
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-secondary {
@@ -1078,6 +1170,46 @@ p {
   opacity: 1;
 }
 
+.custom-slide {
+  border: 2px solid black;
+  border-radius: 1rem;
+  width: 250px !important;
+  /* Custom width */
+  height: 350px !important;
+  /* Custom height */
+}
+
+.swiper-pagination{
+  padding-left: 12rem;
+  position: static;
+  text-align: start;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  /* Default width with !important */
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: #878787;
+  transition: all ease-in-out 0.6s;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #9A5757 !important;
+  width: 30px !important;
+  border-radius: 40% !important;
+}
+
+.swiper-pagination-horizontal{
+  width: 50% !important;
+}
+
+.shape-circle {
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px #888888;
+}
+
 .hover\:bg-hover-color:hover {
   background-color: rgba(67, 67, 67, 0.42);
 }
@@ -1111,3 +1243,7 @@ p {
     padding-right: 10rem;
   }
 }
+
+
+
+

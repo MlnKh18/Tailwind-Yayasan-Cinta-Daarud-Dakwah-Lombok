@@ -14,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Swipper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- css custome style -->
     <link rel="stylesheet" href="style.css" />
     <title>Yayasan Cinta Daarud Dakwah Lombok</title>
   </head>
@@ -181,19 +187,17 @@
       </section>
 
       <!-- Program Section -->
-      <div class="w-full h-screen relative mt-16 md:px-40">
+      <div class="w-full h-[70%] relative mt-16 md:px-40">
         <div class="absolute inset-0 overflow-hidden">
           <div
-            class="absolute w-full min-h-screen bg-primary-default rounded-t-[35%] opacity-30 left-1/2 transform -translate-x-1/2"
+            class="absolute w-full min-h-full bg-primary-default rounded-t-[35%] opacity-30 left-1/2 transform -translate-x-1/2"
           ></div>
         </div>
         <!-- Text Content - Program -->
         <section id="program" class="relative text-secondary">
           <article class="flex flex-col justify-center items-center">
             <h2 class="text-3xl font-bold my-10">Program</h2>
-            <div
-              class="container-card container flex flex-wrap justify-between"
-            >
+            <div class="container-card container flex flex-wrap justify-evenly">
               <div class="card relative w-[300px] h-[200px]">
                 <img
                   src="#"
@@ -322,13 +326,124 @@
       </div>
 
       <!-- Informations now Section -->
-      <div class="w-full h-[50vh] relative md:px-40">
+      <div class="w-full h-[75vh] relative pt-10 flex flex-col justify-between">
         <div class="absolute inset-0 overflow-hidden">
           <div
             class="absolute w-full min-h-screen bg-primary-default opacity-30 left-1/2 transform -translate-x-1/2"
           ></div>
         </div>
+        <section id="information-now" class="w-full">
+          <div
+            class="relative heading-title flex flex-col justify-center items-center mb-4 text-secondary"
+          >
+            <h2 class="text-3xl ">Informasi Terkini</h2>
+            <p>Berita dan Informasi Terkini Yayasan Daarud Dakwah Lombok</p>
+          </div>
+          <div class="relative content-carousel">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide custom-slide">
+                  <div
+                    class="flex flex-col h-full justify-start items-center relative"
+                  >
+                    <!-- Category Label -->
+                    <span
+                      class="absolute top-2 left-2 bg-gray-300 px-2 rounded-xl z-10 text-xs text-black font-normal font-poppins"
+                    >
+                      Category
+                    </span>
+
+                    <!-- Image -->
+                    <img
+                      src="../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg"
+                      alt=""
+                      class="w-full h-3/4 rounded-t-xl border-t-2 border-b-2 border-black object-cover"
+                    />
+
+                    <!-- Title and Date -->
+                    <div
+                      class="title-item-slide w-full flex flex-col justify-center p-1 font-poppins"
+                    >
+                      <h5 class="text-xl font-bold">Judul</h5>
+                      <p class="text-sm">Selasa, 10 September 2024</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide custom-slide">
+                  <div
+                    class="flex flex-col h-full justify-start items-center relative"
+                  >
+                    <!-- Category Label -->
+                    <span
+                      class="absolute top-2 left-2 bg-gray-300 px-2 rounded-xl z-10 text-xs text-black font-normal font-poppins"
+                    >
+                      Category
+                    </span>
+
+                    <!-- Image -->
+                    <img
+                      src="../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg"
+                      alt=""
+                      class="w-full h-3/4 rounded-t-xl border-t-2 border-b-2 border-black object-cover"
+                    />
+
+                    <!-- Title and Date -->
+                    <div
+                      class="title-item-slide w-full flex flex-col justify-center p-1 font-poppins"
+                    >
+                      <h5 class="text-xl font-bold">Judul</h5>
+                      <p class="text-sm">Selasa, 10 September 2024</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Swiper Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Navigation Buttons -->
+            </div>
+          </div>
+        </section>
+        <div class="container-shape relative w-full">
+          <div
+            class="absolute decorations-shape bg-inherit w-full h-10 z-10"
+          ></div>
+          <div
+            class="absolute decorations-shape bg-white w-full h-10 z-10 top-1/2"
+          ></div>
+
+          <!-- Circle with the triangle -->
+          <div class="shape-circle rounded-full w-14 h-14 bg-third absolute z-40 left-1/2 flex justify-center items-center">
+            <img src="../public/assets/images/Polygon 3 (1).png" alt="" class="w-7 object-cover">
+          </div>
+        </div>
       </div>
     </main>
+    <!-- Swipper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiperPaginationBullets = document.querySelectorAll(
+          ".swiper-pagination-bullet"
+        );
+
+        if (swiperPaginationBullets.length > 0) {
+          swiperPaginationBullets.forEach((bullet) => {
+            bullet.classList.add("wide"); // Add class "wide" to increase the size
+          });
+        }
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
