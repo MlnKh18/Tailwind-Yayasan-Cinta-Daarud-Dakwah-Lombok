@@ -258,9 +258,12 @@
             <div
               class="container-card container flex flex-wrap justify-evenly gap-10"
             >
-              <div class="card relative w-[300px] h-[200px]">
+              <div
+                class="card relative w-[300px] h-[200px]"
+                data-images='["../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg", "../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg", "../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg", "../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg", "../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg",  "../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg",  "../public/assets/images/444b8018ebc3991b72be599b51bd28e0.jpg"]'
+              >
                 <img
-                  src="#"
+                  src="https://via.placeholder.com/300x200"
                   alt="image card"
                   class="w-full h-full object-cover block"
                 />
@@ -269,15 +272,20 @@
                 >
                   <button
                     class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
+                    onclick="openPopup(this)"
                   >
                     Lihat Selengkapnya
                   </button>
                 </div>
                 <div class="title-content">Tahfidz</div>
               </div>
-              <div class="card relative w-[300px] h-[200px]">
+
+              <div
+                class="card relative w-[300px] h-[200px]"
+                data-images="['https://via.placeholder.com/150', 'https://via.placeholder.com/150/0000ff/FFFFFF?text=Image+1', 'https://via.placeholder.com/150/ffff00/FFFFFF?text=Image+2']"
+              >
                 <img
-                  src="#"
+                  src="https://via.placeholder.com/300x200"
                   alt="image card"
                   class="w-full h-full object-cover block"
                 />
@@ -286,15 +294,20 @@
                 >
                   <button
                     class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
+                    onclick="openPopup(this)"
                   >
                     Lihat Selengkapnya
                   </button>
                 </div>
                 <div class="title-content">Bahasa Arab</div>
               </div>
-              <div class="card relative w-[300px] h-[200px]">
+
+              <div
+                class="card relative w-[300px] h-[200px]"
+                data-images="['https://via.placeholder.com/150', 'https://via.placeholder.com/150/ff00ff/FFFFFF?text=Image+1', 'https://via.placeholder.com/150/00ffff/FFFFFF?text=Image+2']"
+              >
                 <img
-                  src="#"
+                  src="https://via.placeholder.com/300x200"
                   alt="image card"
                   class="w-full h-full object-cover block"
                 />
@@ -303,6 +316,7 @@
                 >
                   <button
                     class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
+                    onclick="openPopup(this)"
                   >
                     Lihat Selengkapnya
                   </button>
@@ -310,6 +324,30 @@
                 <div class="title-content text-center">
                   Pengajian Umum <br />
                   Ibu-Ibu
+                </div>
+              </div>
+
+              <!-- Popup -->
+              <div
+                id="popup"
+                class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden h-full"
+              >
+                <div
+                  class="relative max-w-md w-full h-full flex justify-center items-center overflow-scroll"
+                >
+                  <button
+                    id="close-gallery-popup"
+                    class="close-popup text-white text-3xl absolute top-4 right-4"
+                    onclick="closeGalleryPopup()"
+                  >
+                    &times;
+                  </button>
+                  <div
+                    id="popup-images"
+                    class="flex flex-wrap items-center justify-center p-4 space-y-4 gap-4 max-h-[80vh] overflow-scroll"
+                  >
+                    <!-- Gambar akan ditambahkan di sini oleh JavaScript -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -540,18 +578,32 @@
         </p>
       </div>
     </div>
-    <footer class="container h-2 px-1 flex flex-col md:flex-row items-end justify-between py-3 mt-10 gap-7">
-      <div class=" w-full flex justify-center items-center gap-5 flex-1 ">
-        <a href="#"><img src="../public/assets/images/logos_facebook.png" alt="facebook" class="w-10 h-auto object-cover"></a> <!-- Ukuran logo lebih kecil -->
-        <a href="#"><img src="../public/assets/images/skill-icons_instagram.png" alt="facebook" class="w-10 h-auto object-cover"></a> <!-- Ukuran logo lebih kecil -->
+    <footer
+      class="container h-2 px-1 flex flex-col md:flex-row items-end justify-between py-3 mt-10 gap-7"
+    >
+      <div class="w-full flex justify-center items-center gap-5 flex-1">
+        <a href="#"
+          ><img
+            src="../public/assets/images/logos_facebook.png"
+            alt="facebook"
+            class="w-10 h-auto object-cover"
+        /></a>
+        <!-- Ukuran logo lebih kecil -->
+        <a href="#"
+          ><img
+            src="../public/assets/images/skill-icons_instagram.png"
+            alt="facebook"
+            class="w-10 h-auto object-cover"
+        /></a>
+        <!-- Ukuran logo lebih kecil -->
       </div>
-      
+
       <p class="text-xs text-center">
         Copyrights ©2024 Yayasan Cinta Daarud Dakwah Lombok & Ma’had Love
         Tahfidz Nurul Ilmi. All Rights Reserved
       </p>
     </footer>
-    
+
     <!-- Swipper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
