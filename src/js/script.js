@@ -16,7 +16,9 @@ function handleNavClick(e) {
     });
   }
 
-  popupNav.classList.add("hidden");
+  if (popupNav) {
+    popupNav.classList.add("hidden");
+  }
 }
 
 // Menambahkan event listener pada setiap item navigasi
@@ -25,9 +27,11 @@ document.querySelectorAll(".nav-properti").forEach(function (navItem) {
 });
 
 // Menangani toggle popup navigasi
-menuToggle.addEventListener("click", () => {
-  popupNav.classList.toggle("hidden");
-});
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    popupNav?.classList.toggle("hidden");
+  });
+}
 
 // Menutup popup navigasi saat tombol ditutup ditekan
 if (closeNavPopup) {
@@ -64,7 +68,7 @@ document.querySelectorAll('.show-more-button').forEach(button => {
       const imgElement = document.createElement('img');
       imgElement.src = image;
       imgElement.alt = 'popup image';
-      imgElement.className = 'w-[300px] h-[200px] rounded-xl object-cover'; 
+      imgElement.className = 'w-[300px] h-[200px] rounded-xl object-cover';
       popupImagesContainer.appendChild(imgElement);
     });
   });

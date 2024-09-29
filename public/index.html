@@ -272,7 +272,7 @@
                 >
                   <button
                     class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
-                    onclick="openPopup(this)"
+                    onclick="openGalleryPopup(this)"
                   >
                     Lihat Selengkapnya
                   </button>
@@ -281,75 +281,76 @@
               </div>
 
               <div
-                class="card relative w-[300px] h-[200px]"
-                data-images="['https://via.placeholder.com/150', 'https://via.placeholder.com/150/0000ff/FFFFFF?text=Image+1', 'https://via.placeholder.com/150/ffff00/FFFFFF?text=Image+2']"
-              >
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  alt="image card"
-                  class="w-full h-full object-cover block"
-                />
-                <div
-                  class="content absolute w-full h-full top-0 left-0 hover:bg-hover-color hover:opacity-100 flex justify-center items-center flex-col opacity-0 transition duration-300"
-                >
-                  <button
-                    class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
-                    onclick="openPopup(this)"
-                  >
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-                <div class="title-content">Bahasa Arab</div>
-              </div>
-
+              class="card relative w-[300px] h-[200px]"
+              data-images='["https://via.placeholder.com/150", "https://via.placeholder.com/150/0000ff/FFFFFF?text=Image+1", "https://via.placeholder.com/150/ffff00/FFFFFF?text=Image+2"]'
+            >
+              <img
+                src="https://via.placeholder.com/300x200"
+                alt="image card"
+                class="w-full h-full object-cover block"
+              />
               <div
-                class="card relative w-[300px] h-[200px]"
-                data-images="['https://via.placeholder.com/150', 'https://via.placeholder.com/150/ff00ff/FFFFFF?text=Image+1', 'https://via.placeholder.com/150/00ffff/FFFFFF?text=Image+2']"
+                class="content absolute w-full h-full top-0 left-0 hover:bg-hover-color hover:opacity-100 flex justify-center items-center flex-col opacity-0 transition duration-300"
               >
-                <img
-                  src="https://via.placeholder.com/300x200"
-                  alt="image card"
-                  class="w-full h-full object-cover block"
-                />
-                <div
-                  class="content absolute w-full h-full top-0 left-0 hover:bg-hover-color hover:opacity-100 flex justify-center items-center flex-col opacity-0 transition duration-300"
+                <button
+                  class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
+                  onclick="openGalleryPopup()"
                 >
-                  <button
-                    class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
-                    onclick="openPopup(this)"
-                  >
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-                <div class="title-content text-center">
-                  Pengajian Umum <br />
-                  Ibu-Ibu
-                </div>
+                  Lihat Selengkapnya
+                </button>
               </div>
+              <div class="title-content">Bahasa Arab</div>
+            </div>
+              <div
+              class="card relative w-[300px] h-[200px]"
+              data-images='["https://via.placeholder.com/150", "https://via.placeholder.com/150/0000ff/FFFFFF?text=Image+1", "https://via.placeholder.com/150/ffff00/FFFFFF?text=Image+2"]'
+            >
+              <img
+                src="https://via.placeholder.com/300x200"
+                alt="image card"
+                class="w-full h-full object-cover block"
+              />
+              <div
+                class="content absolute w-full h-full top-0 left-0 hover:bg-hover-color hover:opacity-100 flex justify-center items-center flex-col opacity-0 transition duration-300"
+              >
+                <button
+                  class="show-more-button px-2 py-1 rounded-md text-white bg-secondary"
+                  onclick="openGalleryPopup()"
+                >
+                  Lihat Selengkapnya
+                </button>
+              </div>
+              <div class="title-content text-center">
+                Pengajian Umum <br />
+                Ibu-Ibu
+              </div>
+            </div>
 
               <!-- Popup -->
               <div
-                id="popup"
-                class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden h-full"
+              id="popup"
+              class="absolute inset-0 h-full pb-10 bg-white z-50 hidden h-full flex justify-center items-center"
+            >
+              <div
+                class="relative w-full max-h-screen bg-white p-6 rounded-md overflow-y-auto"
               >
-                <div
-                  class="relative max-w-md w-full h-full flex justify-center items-center overflow-scroll"
+                <button
+                  id="close-gallery-popup"
+                  class="close-popup text-black text-3xl absolute top-4 right-4"
+                  onclick="closeGalleryPopup()"
                 >
-                  <button
-                    id="close-gallery-popup"
-                    class="close-popup text-white text-3xl absolute top-4 right-4"
-                    onclick="closeGalleryPopup()"
-                  >
-                    &times;
-                  </button>
-                  <div
-                    id="popup-images"
-                    class="flex flex-wrap items-center justify-center p-4 space-y-4 gap-4 max-h-[80vh] overflow-scroll"
-                  >
-                    <!-- Gambar akan ditambahkan di sini oleh JavaScript -->
-                  </div>
+                  &times;
+                </button>
+                <div
+                  id="popup-images"
+                  class="flex flex-wrap items-center justify-center space-y-4 gap-4"
+                >
+                  <!-- Gambar akan ditambahkan di sini oleh JavaScript -->
                 </div>
               </div>
+            </div>
+            
+            
             </div>
             <div
               class="container-information w-full h-auto mt-20 rounded-3xl shadow-2xl bg-third px-5 lg:px-28 py-3 flex flex-wrap justify-center items-center text-white"
