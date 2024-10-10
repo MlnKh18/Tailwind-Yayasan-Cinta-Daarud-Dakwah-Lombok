@@ -12,8 +12,29 @@
   font-weight: normal;
   font-style: normal;
 }
-nav ul li{
-  @apply cursor-pointer transition px-3 py-1 hover:bg-secondary hover:text-white rounded-lg duration-300 ease-in-out
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+nav ul li {
+  @apply cursor-pointer transition px-3 py-1 hover:bg-secondary hover:text-white rounded-lg duration-300 ease-in-out;
 }
 /* Global Styles */
 #popup-nav {
@@ -53,8 +74,11 @@ p {
   transition: all ease-in-out 0.6s;
 }
 .title-content {
-  @apply absolute w-full bottom-2 opacity-100 flex justify-end items-center flex-col font-bold text-2xl;
+  @apply absolute w-full bottom-0 opacity-100 flex justify-end items-center flex-col font-bold text-2xl top-32  tracking-widest;
+  background: linear-gradient(to top, #ffa500, rgba(255, 165, 0, 0));
+  text-shadow: 2px 2px 4px white; /* Bayangan teks untuk efek lebih dramatis */
 }
+
 .custom-slide {
   border: 2px solid black;
   border-radius: 1rem;

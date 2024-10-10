@@ -3,84 +3,54 @@ const popupNav = document.getElementById("popup-nav");
 const menuToggle = document.getElementById("menu-toggle");
 const closeNavPopup = document.getElementById("close-popup");
 
-// Fungsi untuk menangani klik pada navigasi
+// Smooth Scroll and Close Popup
 function handleNavClick(e) {
   e.preventDefault();
   const targetId = this.getAttribute("href");
-  const targetElement = document.querySelector(targetId);
+
+  // Check if the targetId starts with '#' for IDs
+  let targetElement;
+  if (targetId.startsWith('#')) {
+    targetElement = document.querySelector(targetId);
+  } else {
+    // If it's not an ID, try to extract from URL if needed
+    const urlPattern = /#(.+)/;
+    const match = targetId.match(urlPattern);
+    if (match) {
+      targetElement = document.querySelector(`#${match[1]}`);
+    }
+  }
 
   if (targetElement) {
     targetElement.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
+  } else {
+    console.error(`Element not found for selector: ${targetId}`);
   }
 
-  if (popupNav) {
-    popupNav.classList.add("hidden");
-  }
+  popupNav.classList.add("hidden"); // Ensure popup closes after navigation
 }
 
-// Menambahkan event listener pada setiap item navigasi
-document.querySelectorAll(".nav-properti").forEach(function (navItem) {
+
+// Add smooth scroll event to navigation items
+document.querySelectorAll(".nav-properti").forEach((navItem) => {
   navItem.addEventListener("click", handleNavClick);
 });
 
-// Menangani toggle popup navigasi
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    popupNav?.classList.toggle("hidden");
-  });
-}
-
-// Menutup popup navigasi saat tombol ditutup ditekan
-if (closeNavPopup) {
-  closeNavPopup.addEventListener("click", () => {
-    popupNav.classList.add("hidden");
-  });
-}
-
-// POPUP GALLERY
-const closeGalleryPopupBtn = document.getElementById("close-gallery-popup"); // Tombol tutup popup galeri
-
-function openGalleryPopup() {
-  document.getElementById('popup').classList.remove('hidden');
-}
-
-function closeGalleryPopup() {
-  document.getElementById('popup').classList.add('hidden');
-}
-
-// Menambahkan event listener pada tombol "Lihat Selengkapnya"
-document.querySelectorAll('.show-more-button').forEach(button => {
-  button.addEventListener('click', function() {
-    openGalleryPopup();
-
-    // Ambil data gambar dari card yang diklik
-    const card = this.closest('.card');
-    const images = JSON.parse(card.getAttribute('data-images'));
-
-    // Menambahkan gambar ke popup galeri
-    const popupImagesContainer = document.getElementById('popup-images');
-    popupImagesContainer.innerHTML = ''; // Kosongkan konten sebelumnya
-
-    images.forEach(image => {
-      const imgElement = document.createElement('img');
-      imgElement.src = image;
-      imgElement.alt = 'popup image';
-      imgElement.className = 'w-[300px] h-[200px] rounded-xl object-cover';
-      popupImagesContainer.appendChild(imgElement);
-    });
-  });
+// Toggle popup navigation
+menuToggle?.addEventListener("click", () => {
+  popupNav.classList.toggle("hidden");
 });
 
-// Menambahkan event listener pada tombol tutup popup galeri
-if (closeGalleryPopupBtn) {
-  closeGalleryPopupBtn.addEventListener('click', closeGalleryPopup);
-}
+// Close popup
+closeNavPopup?.addEventListener("click", () => {
+  popupNav.classList.add("hidden");
+});
 
-// SWIPER
-document.addEventListener("DOMContentLoaded", function () {
+// SWIPER INITIALIZATION
+document.addEventListener("DOMContentLoaded", () => {
   const swiperPaginationBullets = document.querySelectorAll(".swiper-pagination-bullet");
 
   if (swiperPaginationBullets.length > 0) {
@@ -90,8 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Inisialisasi Swiper
-var swiper = new Swiper(".mySwiper", {
+new Swiper(".mySwiper", {
   slidesPerView: 1.5,
   spaceBetween: 30,
   centeredSlides: true,
@@ -107,4 +76,14 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
     },
   },
+});
+
+// CARD PAGE NAVIGATION BASED ON TITLE
+document.querySelectorAll('.show-more-button').forEach(button => {
+  button.addEventListener('click', (event) => {
+    const card = event.target.closest('.card');
+    const title = card.getAttribute('data-title');
+    const formattedTitle = title.toLowerCase().replace(/\s+/g, '-');
+    window.location.href = `./pages/details-image-${formattedTitle}.html`;
+  });
 });
