@@ -636,6 +636,30 @@ video {
   top: 1rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.bottom-16 {
+  bottom: 4rem;
+}
+
+.bottom-20 {
+  bottom: 5rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -651,6 +675,11 @@ video {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mb-10 {
@@ -734,12 +763,8 @@ video {
   height: 200px;
 }
 
-.h-\[250px\] {
-  height: 250px;
-}
-
-.h-\[300px\] {
-  height: 300px;
+.h-\[400px\] {
+  height: 400px;
 }
 
 .h-\[70\%\] {
@@ -758,6 +783,22 @@ video {
   height: 100vh;
 }
 
+.h-\[00px\] {
+  height: 00px;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-3 {
+  height: 0.75rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -772,6 +813,10 @@ video {
 
 .w-14 {
   width: 3.5rem;
+}
+
+.w-2\/4 {
+  width: 50%;
 }
 
 .w-20 {
@@ -790,12 +835,12 @@ video {
   width: 200px;
 }
 
-.w-\[250px\] {
-  width: 250px;
-}
-
 .w-\[300px\] {
   width: 300px;
+}
+
+.w-\[450px\] {
+  width: 450px;
 }
 
 .w-auto {
@@ -804,6 +849,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .flex-1 {
@@ -953,6 +1002,11 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.bg-background {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 249 242 / var(--tw-bg-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -991,6 +1045,42 @@ video {
   --tw-bg-opacity: 0.75;
 }
 
+.bg-\[url\(\'\/img\/hero-pattern\.svg\'\)\] {
+  background-image: url('/img/hero-pattern.svg');
+}
+
+.bg-\[url\(\'\.\.\/\'\)\] {
+  background-image: url('../');
+}
+
+.bg-\[url\(\'\.\.\/public\/as\'\)\] {
+  background-image: url('../public/as');
+}
+
+.bg-\[url\(\'\.\.\/public\/assets\/\'\)\] {
+  background-image: url('../public/assets/');
+}
+
+.bg-\[url\(\'\.\.\/public\/assets\/image\'\)\] {
+  background-image: url('../public/assets/image');
+}
+
+.bg-\[url\(\'\.\.\/public\/assets\/images\/\'\)\] {
+  background-image: url('../public/assets/images/');
+}
+
+.bg-\[url\(\'\.\.\/public\/assets\/images\/banner-decoration\'\)\] {
+  background-image: url('../public/assets/images/banner-decoration');
+}
+
+.bg-\[url\(\'\.\.\/public\/assets\/images\/banner-decoration\.\'\)\] {
+  background-image: url('../public/assets/images/banner-decoration.');
+}
+
+.bg-\[url\(\'\.\.\/public\/assets\/images\/banner-decoration\.png\'\)\] {
+  background-image: url('../public/assets/images/banner-decoration.png');
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -999,6 +1089,11 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-1 {
@@ -1054,6 +1149,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pr-3 {
   padding-right: 0.75rem;
 }
@@ -1068,6 +1168,14 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .text-center {
@@ -1449,10 +1557,6 @@ article #popup {
     width: 50%;
   }
 
-  .md\:w-3\/4 {
-    width: 75%;
-  }
-
   .md\:w-\[600px\] {
     width: 600px;
   }
@@ -1467,6 +1571,14 @@ article #popup {
 
   .md\:gap-36 {
     gap: 9rem;
+  }
+
+  .md\:gap-2 {
+    gap: 0.5rem;
+  }
+
+  .md\:gap-20 {
+    gap: 5rem;
   }
 
   .md\:rounded-b-\[35\%\] {
@@ -1494,6 +1606,10 @@ article #popup {
     padding-right: 7rem;
   }
 
+  .md\:pt-12 {
+    padding-top: 3rem;
+  }
+
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -1516,6 +1632,21 @@ article #popup {
   .lg\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
+  }
+
+  .lg\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .lg\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .lg\:px-36 {
+    padding-left: 9rem;
+    padding-right: 9rem;
   }
 
   .lg\:pt-12 {

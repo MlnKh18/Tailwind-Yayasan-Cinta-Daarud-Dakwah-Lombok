@@ -8,6 +8,7 @@ module.exports = {
         poppins: 'Poppins'
       },
       colors: {
+        'background' : '#F7F9F2',
         'primary': {
           "default": '#ffe8ba',
           "hover": "#ffffff"
