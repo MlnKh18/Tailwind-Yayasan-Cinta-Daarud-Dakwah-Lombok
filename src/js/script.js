@@ -60,23 +60,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-new Swiper(".mySwiper", {
-  slidesPerView: 1.5,
-  spaceBetween: 30,
-  centeredSlides: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+// Accordion
+const toggleElements = document.querySelectorAll('.toogle-information');
+toggleElements.forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    // Mengambil id target dari atribut data-target
+    const targetId = toggle.getAttribute('data-target');
+    console.info(targetId)
+    // Mengambil elemen container yang sesuai dengan targetId
+    const targetElement = document.getElementById(targetId);
+    // Menampilkan atau menyembunyikan container informasi terkait
+    targetElement.classList.toggle('hidden');
+    
+    // Log untuk debugging
+    // console.info(targetElement); // Menampilkan elemen container yang di-toggle
+  });
+});
+
+//  Swipper
+new Swiper(".swiper", {
+  slidesPerView: 2, // berarti dua slide akan ditampilkan sekaligus dalam satu tampilan.
+  spaceBetween: 0,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
+
   breakpoints: {
-    640: {
+    0: {
+      slidesPerView: 1,
+    },
+    948: {
       slidesPerView: 2,
     },
-    768: {
+    1038: {
       slidesPerView: 3,
     },
   },
 });
+
 
 // CARD PAGE NAVIGATION BASED ON TITLE
 document.querySelectorAll('.show-more-button').forEach(button => {

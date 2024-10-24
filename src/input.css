@@ -12,7 +12,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 20px;
@@ -66,49 +65,73 @@ p {
   @apply font-medium font-poppins;
 }
 
+.toogle-information {
+  cursor: pointer;
+  display: flex;
+  padding: 4px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  color: #0e6678;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+.toogle-information:hover {
+  color: white;
+  background: #0e6678;
+  transition: all ease-in-out 0.2s;
+}
+
 .card {
-  @apply border-2 border-black rounded-3xl overflow-hidden;
+  @apply border-2 rounded-2xl overflow-hidden;
 }
 .show-more-button:hover {
   border: 2px solid rgb(185, 185, 185);
   transition: all ease-in-out 0.6s;
 }
 .title-content {
-  @apply absolute w-full bottom-0 opacity-100 flex justify-end items-center flex-col font-bold text-2xl top-32  tracking-widest;
-  background: linear-gradient(to top, #ffa500, rgba(255, 165, 0, 0));
-  text-shadow: 2px 2px 4px white; /* Bayangan teks untuk efek lebih dramatis */
+  @apply absolute w-full bottom-0 opacity-100 flex justify-end items-center flex-col font-bold text-2xl top-32  tracking-widest text-white;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.542),
+    rgba(255, 165, 0, 0)
+  );
 }
 
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px;
+  font-weight: bold;
+}
+.next,
+.prev {
+  border-radius: 25%;
+  width: 44px;
+  background-color: white;
+  color: #0e6678;
+}
+.next:hover,
+.prev:hover{
+  color: white;
+  background: #0e6678;
+  transition: all ease-in-out 0.2s;
+}
+
+.swipper-decoration {
+  background-image: url(../public/assets/images/decoration-swipper.png);
+}
+.square-number {
+  color: white;
+}
 .custom-slide {
-  border: 2px solid black;
   border-radius: 1rem;
   width: 250px !important; /* Custom width */
   height: 350px !important; /* Custom height */
 }
-.swiper-pagination {
-  padding-left: 12rem;
-  position: static;
-  text-align: center;
-}
-.swiper-pagination-bullet {
-  width: 10px !important; /* Default width with !important */
-  height: 10px !important;
-  border-radius: 50% !important;
-  background-color: #878787;
-  transition: all ease-in-out 0.6s;
-}
-.swiper-pagination-bullet-active {
-  background-color: #9a5757 !important;
-  width: 30px !important;
-  border-radius: 40% !important;
-}
-.swiper-pagination-horizontal {
-  margin-top: 10px;
-  padding-left: 0 !important ;
-}
 .shape-circle {
   position: relative;
-  border-radius: 50%;
+  border-radius: 25%;
   box-shadow: 0px 5px 10px #888888;
 }
 article #popup {
@@ -118,4 +141,7 @@ article #popup {
 #popup-images img {
   max-width: 300px; /* Ukuran maksimum sesuai dengan ukuran card */
   height: auto; /* Agar proporsional */
+}
+footer {
+  border-top: 1px solid grey;
 }
