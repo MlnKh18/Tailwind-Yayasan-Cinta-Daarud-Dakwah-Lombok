@@ -920,6 +920,10 @@ video {
   gap: 3rem;
 }
 
+.gap-14 {
+  gap: 3.5rem;
+}
+
 .gap-16 {
   gap: 4rem;
 }
@@ -1341,6 +1345,10 @@ video {
   font-style: normal;
 }
 
+*{
+  border: 1px solid red;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 20px;
@@ -1568,7 +1576,7 @@ footer {
 }
 
 .hover\:bg-hover-color:hover {
-  background-color: rgba(67, 67, 67, 0.42);
+  background-color: rgba(14, 102, 120, 0.6);
 }
 
 .hover\:opacity-100:hover {
@@ -1630,12 +1638,16 @@ footer {
     width: 80%;
   }
 
-  .md\:w-52 {
-    width: 13rem;
-  }
-
   .md\:w-\[700px\] {
     width: 700px;
+  }
+
+  .md\:w-5 {
+    width: 1.25rem;
+  }
+
+  .md\:w-5\/6 {
+    width: 83.333333%;
   }
 
   .md\:flex-row {
@@ -1719,8 +1731,20 @@ footer {
     width: 83.333333%;
   }
 
+  .lg\:w-52 {
+    width: 13rem;
+  }
+
   .lg\:w-\[420px\] {
     width: 420px;
+  }
+
+  .lg\:w-4 {
+    width: 1rem;
+  }
+
+  .lg\:w-4\/5 {
+    width: 80%;
   }
 
   .lg\:flex-row {

@@ -91,10 +91,10 @@ new Swiper(".swiper", {
     0: {
       slidesPerView: 1,
     },
-    948: {
+    1000: {
       slidesPerView: 2,
     },
-    1038: {
+    1350: {
       slidesPerView: 3,
     },
   },

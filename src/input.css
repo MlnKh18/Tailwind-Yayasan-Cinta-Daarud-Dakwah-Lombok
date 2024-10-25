@@ -12,6 +12,9 @@
   font-weight: normal;
   font-style: normal;
 }
+*{
+  border: 1px solid red;
+}
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 20px;

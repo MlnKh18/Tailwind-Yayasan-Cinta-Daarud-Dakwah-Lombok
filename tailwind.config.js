@@ -15,7 +15,7 @@ module.exports = {
         },
         'secondary': '#0E6678',
         'third': '#FFA500',
-        'hover-color': 'rgba(67, 67, 67, 0.42)'
+        'hover-color': 'rgba(14, 102, 120, 0.6)'
       }
     },
   },
